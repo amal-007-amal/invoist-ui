@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -26,11 +27,42 @@ const routes: Routes = [
     path:'expenses',
     pathMatch:'full',
     loadChildren:()=>import('../app/pages/expenses/expense.module').then(ex =>ex.ExpenseModule)
+  },
+  {
+    path:'customers',
+    pathMatch:'full',
+    loadChildren:()=>import('../app/pages/customers/customers.module').then(c =>c.CustomersModule)
+  },
+  {
+    path:'vendors-suppliers',
+    pathMatch:'full',
+    loadChildren:()=>import('../app/pages/vendors-suppliers/vendors.module').then(vs =>vs.VendorsSupplierModule)
+  },
+  {
+    path:'reports',
+    pathMatch:'full',
+    loadChildren:()=>import('../app/pages/reports/reports.module').then(r =>r.ReportsModule)
+  },
+  {
+    path:'login',
+    loadChildren:()=>import('../app/pages/authentication/authentication.module').then(l =>l.AuthenticationModule)
+  },
+  {
+    path:'404',
+    component:NotFoundComponent
+  },
+  {
+    path:'**',
+    redirectTo:'404'
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,
+    {
+      useHash:true,
+      preloadingStrategy:PreloadAllModules,
+    })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
