@@ -20,12 +20,11 @@ import { DashboardModule } from './pages/dashboard/dashboard.module';
     BrowserModule,
     BrowserAnimationsModule,
     DashboardModule,
+    AuthenticationModule,
     AppRoutingModule,
     RouterModule,
-    BrowserAnimationsModule,
     UIMaterialModule,
     SharedModule,
-    AuthenticationModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

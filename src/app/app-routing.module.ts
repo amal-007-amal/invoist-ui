@@ -44,12 +44,12 @@ const routes: Routes = [
     loadChildren:()=>import('../app/pages/reports/reports.module').then(r =>r.ReportsModule)
   },
   {
-    path:'login',
-    loadChildren:()=>import('../app/pages/authentication/authentication.module').then(l =>l.AuthenticationModule)
-  },
-  {
     path:'404',
     component:NotFoundComponent
+  },
+  {
+    path:'login',
+    loadChildren:()=>import('./pages/authentication/authentication.module').then(a => a.AuthenticationModule)
   },
   {
     path:'**',
@@ -62,7 +62,9 @@ const routes: Routes = [
     {
       useHash:true,
       preloadingStrategy:PreloadAllModules,
-    })],
+    }
+    )],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

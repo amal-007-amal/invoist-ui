@@ -5,20 +5,24 @@ import { UIMaterialModule } from "src/app/UIMaterial/ui-material.module";
 import { LoginComponent } from "./components/login/login.component";
 import { SignUpComponent } from "./components/sign-up/sign-up.component";
 import { RouterModule } from "@angular/router";
+import { AuthlayerComponent } from "./container/authlayer/authlayer.component";
+import { AuthenticationRoutingModule } from "./authentication.routing.module";
 
 @NgModule({
     declarations:[
+        AuthlayerComponent,
         LoginComponent,
         SignUpComponent
     ],
     imports:[
         UIMaterialModule,
+        AuthenticationRoutingModule,
         CommonModule,
         ReactiveFormsModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule,
     ],
-    providers:[],
-    exports:[RouterModule]
+    providers:[]
 })
 
 export class AuthenticationModule{}

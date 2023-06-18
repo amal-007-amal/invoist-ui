@@ -4,6 +4,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
 import { LayoutComponent } from './layout/layout.component';
 import { UIMaterialModule } from "../UIMaterial/ui-material.module";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations:[
@@ -13,9 +15,15 @@ import { UIMaterialModule } from "../UIMaterial/ui-material.module";
     LayoutComponent
   ],
     imports:[
+      CommonModule,
+      RouterModule,
       UIMaterialModule
     ],
-    exports:[]
+    exports:[
+      SidebarComponent,
+      LayoutComponent,
+      HeaderComponent,
+    ]
 })
 
 export class SharedModule{}
