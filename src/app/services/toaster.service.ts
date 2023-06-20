@@ -13,7 +13,7 @@ export class ToasterService {
   success(message:string){
     return this.snackService.open(message,"close",{
       panelClass:['snackbar-success'],
-      duration:2000,
+      duration:5000,
       horizontalPosition:'center',
       verticalPosition:'top'
     })
@@ -22,7 +22,7 @@ export class ToasterService {
   error(message:string){
     return this.snackService.open(message,"clsoe",{
       panelClass:['snackbar-error'],
-      duration:2000,
+      duration:5000,
       horizontalPosition:'center',
       verticalPosition:'top'
     })
@@ -31,7 +31,7 @@ export class ToasterService {
   info(message:string){
     return this.snackService.open(message,"clsoe",{
       panelClass:['snackbar-info'],
-      duration:2000,
+      duration:5000,
       horizontalPosition:'center',
       verticalPosition:'top'
     })
@@ -40,7 +40,7 @@ export class ToasterService {
   warning(message:string){
     return this.snackService.open(message,"clsoe",{
       panelClass:['snackbar-warning'],
-      duration:2000,
+      duration:5000,
       horizontalPosition:'center',
       verticalPosition:'top'
     })

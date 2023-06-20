@@ -1,14 +1,30 @@
-<div class="form px-4">
+<div>
+    <mat-form-field appearance="outline" class="mt-2">
+      <mat-icon></mat-icon>
+      <mat-label>Enter Your name</mat-label>
+      <input matInput name="name" id="name" placeholder="Name">
+    </mat-form-field>
 
-    <input type="text" name="" class="form-control" placeholder="Name">
+    <mat-form-field appearance="outline" >
+      <mat-label>Enter Your Email</mat-label>
+      <input matInput name="Email" id="Email" placeholder="Enter Your Email">
+    </mat-form-field>
 
-    <input type="text" name="" class="form-control" placeholder="Email">
+    <mat-form-field appearance="outline" >
+      <mat-label>Enter Your Phone Number</mat-label>
+      <input type="number" matInput name="phone" id="phone"  placeholder="Phone">
+    </mat-form-field>
 
-    <input type="text" name="" class="form-control" placeholder="Phone">
+    <mat-form-field appearance="outline" >
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" name="password" id="password">
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
 
-    <input type="text" name="" class="form-control" placeholder="Password">
-
-    <button class="btn btn-dark btn-block">Signup</button>
+    <div class="pb-2 text-center">
+      <button mat-raised-button color="primary" >Signup</button>
+    </div>
     
-
   </div>

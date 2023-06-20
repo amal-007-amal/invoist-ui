@@ -1,1 +1,29 @@
-<p>sidebar works!</p>
+<mat-list>
+    <mat-list-item routerLink="{{routes.DASHBOARD}}" routerLinkActive="active">
+      <mat-icon>home</mat-icon> Dashboard
+    </mat-list-item>
+    <mat-list-item routerLink="{{routes.ESTIMATE}}" routerLinkActive="active">
+      <mat-icon>text_fields</mat-icon> Estimates
+    </mat-list-item>
+    <mat-list-item routerLink="{{routes.INVOICES}}" routerLinkActive="active">
+      <mat-icon>border_all</mat-icon> Invoices
+    </mat-list-item>
+    <mat-list-item routerLink="{{routes.DELIVERY_CHALLENS}}" routerLinkActive="active">
+      <mat-icon>notifications_none</mat-icon> Delivery Challans
+    </mat-list-item>
+    <mat-list-item routerLink="{{routes.EXPENSES}}" routerLinkActive="active">
+        <mat-icon>notifications_none</mat-icon> Expenses
+      </mat-list-item>
+      <mat-list-item routerLink="{{routes.CUSTOMERS}}" routerLinkActive="active">
+        <mat-icon>notifications_none</mat-icon> Customers
+      </mat-list-item>
+      <mat-list-item routerLink="{{routes.VENDORS_SUPPLIERS}}" routerLinkActive="active">
+        <mat-icon>notifications_none</mat-icon> Vendors / Suppliers
+      </mat-list-item>
+      <mat-list-item routerLink="{{routes.REPORTS}}" routerLinkActive="active">
+        <mat-icon>notifications_none</mat-icon> Reports
+      </mat-list-item>
+    <mat-list-item (click)="openUiElements()">
+      <mat-icon>filter_none</mat-icon>
+    </mat-list-item>
+  </mat-list>

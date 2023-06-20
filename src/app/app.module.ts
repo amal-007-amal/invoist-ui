@@ -11,6 +11,7 @@ import { RouterModule } from '@angular/router';
 import { AuthenticationModule } from './pages/authentication/authentication.module';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 
+
 @NgModule({
   declarations: [
     AppComponent,

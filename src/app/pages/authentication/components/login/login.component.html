@@ -1,9 +1,17 @@
-<div class="form px-4">
-    
-    <input type="text" name="email" id="email" class="form-control" placeholder="Email">
-
-    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
-
-    <button class="btn btn-dark btn-block">Login</button>
-    
-  </div>
+    <div class="">
+      <mat-form-field class="d-block">
+        <mat-label>Enter Your Email</mat-label>
+        <input matInput name="email" id="email" placeholder="Email">
+      </mat-form-field>
+  
+      <mat-form-field class="d-block">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" id="password">
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="text-center">
+        <button mat-raised-button color="primary" (click)="onLogin()">Login</button>
+      </div>
+    </div>
